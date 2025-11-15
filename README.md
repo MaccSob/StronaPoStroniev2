@@ -1,6 +1,4 @@
-# ReactApp
+# Company page 
 
-Using XXX API 
-
-
-
+Tech Used:
+React(Framework tbd)
