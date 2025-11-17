@@ -1,4 +1,6 @@
 # Company page 
 
 Tech Used:
-React(Framework tbd)
+React,
+NextJS (TypeScript, Tailwind)
+
