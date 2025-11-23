@@ -16,7 +16,7 @@ export default function Navbar() {
     <ul className='flex gap-10 text-lg'>
 
 
-    <Link href='/about' className='text-black-300 hover:text-green transition-colors text-1xm font-medium relative after:bg-green-400 after:absolute after:h-1 after:w-0 after:bottom-2 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>
+    <Link href='/about' className='text-black-300 hover:text-green transition-colors text-1xm font-medium relative after:bg-green-400 after:absolute after:h-1 after:w-0 after:bottom-2 after:left-0 hover:after:w-full after:transition-all after:duration-750 cursor-pointer hover:translate-y-0.75'>
         O mnie
     </Link>
 
@@ -24,19 +24,19 @@ export default function Navbar() {
 
 
 
-     <Link href='/portfolio' className='text-black-300 hover:text-green transition-colors text-1xm font-medium relative after:bg-green-400 after:absolute after:h-1 after:w-0 after:bottom-2 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer' >
+     <Link href='/portfolio' className='text-black-300 hover:text-green transition-colors text-1xm font-medium relative after:bg-green-400 after:absolute after:h-1 after:w-0 after:bottom-2 after:left-0 hover:after:w-full after:transition-all after:duration-750 cursor-pointer hover:translate-y-0.75' >
         Portfolio
     </Link>
 
 
-     <Link href='/contact' className='text-black-300 hover:text-green transition-colors text-1xm font-medium relative after:bg-green-400 after:absolute after:h-1 after:w-0 after:bottom-2 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>
+     <Link href='/contact' className='text-black-300 hover:text-green transition-colors text-1xm font-medium relative after:bg-green-400 after:absolute after:h-1 after:w-0 after:bottom-2 after:left-0 hover:after:w-full after:transition-all after:duration-750 cursor-pointer hover:translate-y-0.75'>
         Kontakt
     </Link>
 
 
 
 
-        <Link href='/products' className='text-black-300 hover:text-green transition-colors text-1xm font-medium relative after:bg-green-400 after:absolute after:h-1 after:w-0 after:bottom-2 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>
+        <Link href='/products' className='text-black-300 hover:text-green transition-colors text-1xm font-medium relative after:bg-green-400 after:absolute after:h-1 after:w-0 after:bottom-2 after:left-0 hover:after:w-full after:transition-all after:duration-750 cursor-pointer hover:translate-y-0.75'>
         Oferta
     </Link>
  
