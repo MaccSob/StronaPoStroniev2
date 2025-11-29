@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
   
     <>
-    <nav className='fixed top-0 w-full flex items-center justify-around py-5 px-24 border-b border-gray-700 bg-white dark:bg-black text-black dark:text-white transition-all duration-750 ease-out'>
+    <nav className='fixed top-0 w-full flex items-center justify-around py-5 px-24 border-b border-gray-700 bg-white dark:bg-black text-black dark:text-white transition-all duration-750 ease-out bg-[url(MyLightImage.jpg)] dark:bg-[url(MyDarkImage.jpg)]'>
 
 
     <Link href='/' className='text-black-300 hover:text-green transition-colors text-1xm font-medium '>
