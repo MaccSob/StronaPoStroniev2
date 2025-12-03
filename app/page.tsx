@@ -1,8 +1,11 @@
 import Review from "./Review";
-import './styles/homestyle.scss'
+import './styles/products.scss'
 
 export default function Home() {
   return (
+
+
+    
   
   <div className="min-h-screen flex items-center justify-center bg-white dark:bg-black text-black dark:text-white transition-all duration-300">
     <div className="space-y3 max-w-3xl">

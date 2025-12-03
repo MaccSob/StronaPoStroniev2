@@ -4,6 +4,7 @@ import "./globals.css";
 import {ThemeProvider} from "next-themes"
 import Navbar from "./Navbar/navbar";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
