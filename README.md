@@ -4,3 +4,4 @@ Tech Used:
 React,
 NextJS (TypeScript, Tailwind)
 
+sass
