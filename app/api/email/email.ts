@@ -1,19 +1,18 @@
-import { type NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { FormData } from "../../contact/page";
 
-export async function POST(request: NextRequest) {
-  return NextResponse.json('Hello from API!');
+
+export function sendEmail(data: FormData) {
+  const apiEndpoint = '/api/email';
+
+  fetch(apiEndpoint, {
+    method: 'POST',
+    body: JSON.stringify(data),
+  })
+    .then((res) => res.json())
+    .then((response) => {
+      alert(response.message);
+    })
+    .catch((err) => {
+      alert(err);
+    });
 }
-
-
-
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    type: "OAuth2",
-    user: "me@gmail.com",
-    clientId: process.env.GOOGLE_CLIENT_ID,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
-  },
-});

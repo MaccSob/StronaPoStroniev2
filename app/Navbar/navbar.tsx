@@ -1,4 +1,4 @@
-
+import { HiMiniBookOpen } from "react-icons/hi2";
 import Link from 'next/link';
 import { ThemeToggle } from '../theme-toggle';
 
@@ -6,11 +6,12 @@ export default function Navbar() {
   return (
   
     <>
-    <nav className='fixed top-0 w-full flex items-center justify-around py-5 px-24 border-b border-gray-700 bg-white dark:bg-black text-black dark:text-white transition-all duration-750 ease-out bg-[url(MyLightImage.jpg)] dark:bg-[url(MyDarkImage.jpg)]'>
+    <nav className='fixed top-0 w-full flex items-center justify-between py-5 px-24 border-b border-gray-700 bg-white dark:bg-black text-black dark:text-white transition-all duration-750 ease-out'>
 
 
-    <Link href='/' className='text-black-300 hover:text-green transition-colors text-1xm font-medium '>
-    Logo 
+    <Link href='/' className='text-black-300 hover:text-green transition-colors text-2xl font-medium  flex items-center gap-3'>
+    <HiMiniBookOpen size={35}/>
+    Strona po stronie 
     </Link>
 
     <ul className='flex gap-10 text-lg'>

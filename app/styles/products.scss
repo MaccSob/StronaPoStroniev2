@@ -1,11 +1,14 @@
 
 
-.div1:hover {
+.div1:hover, .div2:hover, .div3:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+  box-shadow: 0 0 20px rgba(28, 133, 68, 0.5);
 }
 
 .div1:hover::before {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
+}
+.div1>h2, .div2>h2,.div3>h2  {
+    padding-bottom: 5px;
 }
