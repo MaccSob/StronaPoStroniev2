@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className='fixed top-0 w-full flex items-center justify-between py-5 px-24 border-b border-gray-700 bg-white dark:bg-black text-black dark:text-white transition-all duration-750 ease-out'>
 
 
-    <Link href='/' className='text-black-300 hover:text-green transition-colors text-2xl font-medium  flex items-center gap-3'>
+    <Link href='/' className='text-black-300 hover:text-green transition-colors text-2xl font-medium  flex items-center gap-3 relative cursor-pointer hover:translate-y-0.75'>
     <HiMiniBookOpen size={35}/>
     Strona po stronie 
     </Link>
