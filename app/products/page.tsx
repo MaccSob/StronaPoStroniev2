@@ -12,19 +12,42 @@ export default function Products() {
 <div className="div1"> 
             <h2 className="text-green-800 text-3xl font-semibold text-left flex items-center gap-3">Redakcja <PiEyeglasses size={35} /></h2>
   Podczas redakcji, czyli pierwszego czytania, sprawdzam i poprawiam tekst pod względem merytorycznym, logicznym, stylistycznym i językowym. Analizuję tekst z perspektywy potencjalnego czytelnika i wskazuję, co można w nim ulepszyć. Dbam o to, aby tekst był poprawny, spójny i atrakcyjny. Sugeruję zmiany, które pomogą udoskonalić tekst, eliminuję błędy, nieścisłości, powtórzenia i zbędne informacje. 
+<p>
+
+od 15 zł za stronę*
+</p>
+<p>
+od 180 zł za arkusz**
+</p>
+
+
   </div>
 <div className="div2">
    <h2 className=" text-green-800 text-3xl font-semibold text-left flex items-center gap-3"> Korekta <FaPenFancy size={35}/>  </h2>
    
-   Podczas korekty, czyli drugiego czytania, zaznaczam błędy językowe: interpunkcyjne, leksykalne, fleksyjne, składniowe, stylistyczne, a także błędy składu, takie jak bękarty, szewce, wdowy, nieprawidłowa paginacja stron i inne. </div>
+   Podczas korekty, czyli drugiego czytania, zaznaczam błędy językowe: interpunkcyjne, leksykalne, fleksyjne, składniowe, stylistyczne, a także błędy składu, takie jak bękarty, szewce, wdowy, nieprawidłowa paginacja stron i inne. 
+   <p>
+od 10 zł za stronę*
+   </p>
+   <p>
+    od 140 zł za arkusz**
+   </p>
+
+   </div>
 <div className="div3">
      <h2 className="text-green-800 text-3xl font-semibold text-left flex items-center gap-3">Skład DTP <MdOutlineComputer size={35}/></h2>
-  Jako grafik DTP dobieram krój i stopień pisma, ustalam szerokość marginesów i wielkość interlinii, a także planuję wygląd wszystkich dodatkowych elementów publikacji. Celem składu jest ułatwienie czytania tekstu i zwiększenie jego atrakcyjności. </div>
+  Jako grafik DTP dobieram krój i stopień pisma, ustalam szerokość marginesów i wielkość interlinii, a także planuję wygląd wszystkich dodatkowych elementów publikacji. Celem składu jest ułatwienie czytania tekstu i zwiększenie jego atrakcyjności.
+  <p>
+ od 100 zł za arkusz** 
+</p>
+   </div>
+
+
 </div>
 
 <div className="div4 m-3">
- <h3 className="text-green-800 text-2xm font-semibold text-left flex items-center gap-3">* strona znormalizowana – 1800 znaków ze spacjami
-** arkusz wydawniczy – 40 000 znaków ze spacjami
+ <h3 className="text-green-800 text-2xm font-semibold text-left flex items-center gap-3"> * strona znormalizowana – 1800 znaków ze spacjami </h3>
+ <h3 className="text-green-800 text-2xm font-semibold text-left flex items-center gap-3">* arkusz wydawniczy – 40 000 znaków ze spacjami
 </h3>
 Podane ceny są orientacyjne, a każde zlecenie wyceniam indywidualnie. Do przygotowania wyceny potrzebuję od Ciebie kilku informacji: rodzaj treści, długość, czyli liczba znaków ze spacjami, termin realizacji, a także czy tekst był już wcześniej sprawdzany przez kogoś innego. Możesz od razu przesłać mi próbkę swojego tekstu o długości 3000–5000 znaków ze spacjami. Pozwoli mi ona ustalić, ile pracy będzie mnie czekało nad tekste
 
