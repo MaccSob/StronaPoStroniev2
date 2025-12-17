@@ -1,0 +1,13 @@
+
+.imgcontainer {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+}
+.imgcontainer>img {
+  transition: transform .5s ease;
+}
+.imgcontainer>img:hover {
+        transform: scale(2.0);
+}
