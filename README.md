@@ -2,6 +2,6 @@
 
 Tech Used:
 React,
-NextJS (TypeScript, Tailwind)
+NextJS (TypeScript, Tailwind),
+Sass
 
-sass
