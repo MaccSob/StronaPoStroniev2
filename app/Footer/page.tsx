@@ -1,27 +1,79 @@
 import Link from 'next/link'
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
 
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer>
-      <div className="mt-16 flex flex-col items-center">
-        <div className="mb-3 flex space-x-4">
-               <Link href="#">
-            <FaInstagram />
-          </Link>
-                 <Link href="#">
-            <FaFacebook />
-          </Link>
+    <footer className="bg-white text-black p-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <h3 className="font-bold mb-3">Sklep</h3>
+          <ul>
+            <li>
+              <Link href="#">
+                <span className="cursor-pointer hover:underline">loor</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="#">
+                <span className="cursor-pointer hover:underline">loor</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="#">
+                <span className="cursor-pointer hover:underline">loor</span>
+              </Link>
+            </li>
+          </ul>
         </div>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">          <div>{` • `}</div>
-          <div>{`© Strona po stronie ${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
+        <div>
+          <h3 className="font-bold mb-3">Informacje</h3>
+          <ul>
+            <li>
+              <Link href="/about">
+                <span className="cursor-pointer hover:underline">O mnie</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact">
+                <span className="cursor-pointer hover:underline">Kontakt</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/policy">
+                <span className="cursor-pointer hover:underline">Polityka prywatności</span>
+              </Link>
+            </li>
+          </ul>
         </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+        <div>
+          <h3 className="font-bold mb-3">Social media</h3>
+          <ul>
+            <li>
+              <Link href="/account/orders">
+                <span className="cursor-pointer hover:underline"> <FaInstagram size={25}/> </span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/account/settings">
+                <span className="cursor-pointer hover:underline"> <FaFacebook size={25}/> </span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/account/help">
+                <span className="cursor-pointer hover:underline">?</span>
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
+      <div className="text-center pt-8 border-t border-gray-700 mt-8">
+        <p>&copy; {new Date().getFullYear()} Strona po Stronie Wszelkie prawa zastrzeżone.</p>
+      </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;
