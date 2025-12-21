@@ -6,16 +6,11 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-black p-10">
+    <footer className="bg-white text-black p-10 dark:bg-black dark:text-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
-          <h3 className="font-bold mb-3">Sklep</h3>
+          <h3 className="font-bold mb-3">Foor</h3>
           <ul>
-            <li>
-              <Link href="#">
-                <span className="cursor-pointer hover:underline">loor</span>
-              </Link>
-            </li>
             <li>
               <Link href="#">
                 <span className="cursor-pointer hover:underline">loor</span>
@@ -59,11 +54,6 @@ const Footer = () => {
             <li>
               <Link href="/account/settings">
                 <span className="cursor-pointer hover:underline"> <FaFacebook size={25}/> </span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/account/help">
-                <span className="cursor-pointer hover:underline">?</span>
               </Link>
             </li>
           </ul>
