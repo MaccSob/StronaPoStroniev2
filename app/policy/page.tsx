@@ -6,58 +6,37 @@ export default function Policy() {
 
 <div className=" dark:bg-black">
     <div className="text-black dark:text-white container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
+        <h1 className="text-3xl font-bold mb-4">Polityka prywatności</h1>
 
-        <p className="mb-4">
-            This privacy policy sets out how our website uses and protects any information that you give us when you use
-            this
-            website.
-        </p>
-
-        <h2 className="text-2xl font-bold mb-2">Information We Collect</h2>
-
-        <p className="mb-4">
-            We may collect the following information:
-        </p>
+        <h2 className="text-2xl font-bold mb-2">Informacje ogólne</h2>
 
         <ul className="list-disc list-inside mb-4">
-            <li>Your name and contact information</li>
-            <li>Demographic information</li>
-            <li>Other information relevant to customer surveys and/or offers</li>
+            <li> Niniejsza polityka dotyczy strony internetowej stronapostronie.pl </li>
+            <li> Operatorem serwisu oraz Administratorem danych osobowych jest: Izabela Sobolewska, ul. Stanisława Kunickiego 59t/12, 54-616 Wrocław</li>
+            <li> Kontakt z Administratorem jest możliwy za pośrednictwem poczty e-mail: izabela@stronapostronie.pl </li>
+            <li> Operator jest Administratorem Twoich danych osobowych w odniesieniu do danych podanych dobrowolnie w Serwisie. </li>
+            <li> Serwis wykorzystuje dane osobowe w następujących celach: 
+                 Obsługa zapytań przez formularz.
+
+            </li>
+            <li> Serwis realizuje funkcje pozyskiwania informacji o użytkownikach i ich zachowaniu w następujący sposób: 
+                 Poprzez dobrowolnie wprowadzone w formularzach dane, które zostają wprowadzone do systemów Operatora. 
+                  Poprzez zapisywanie w urządzeniach końcowych plików cookie (tzw. „ciasteczka”). 
+            </li>
         </ul>
 
-        <h2 className="text-2xl font-bold mb-2">How We Use the Information</h2>
-
-        <p className="mb-4">
-            We require this information to understand your needs and provide you with a better service, and in
-            particular
-            for
-            the following reasons:
-        </p>
+        <h2 className="text-2xl font-bold mb-2"> Wybrane metody ochrony danych stosowane przez Operatora </h2>
 
         <ul className="list-disc list-inside mb-4">
-            <li>Internal record keeping</li>
-            <li>Improving our products and services</li>
-            <li>Sending promotional emails about new products, special offers, or other information which we think you
-                may
-                find
-                interesting</li>
-            <li>From time to time, we may also use your information to contact you for market research purposes. We may
-                contact
-                you by email, phone, or mail. We may use the information to customize the website according to your
-                interests.</li>
+           <li>
+    Miejsca logowania i wprowadzania danych osobowych są chronione w warstwie transmisji (certyfikat SSL). Dzięki temu dane osobowe i dane logowania, wprowadzone na stronie, zostają zaszyfrowane w komputerze użytkownika i mogą być odczytane jedynie na docelowym serwerze.
+</li>
         </ul>
 
-        <h2 className="text-2xl font-bold mb-2">Security</h2>
+        <h2 className="text-2xl font-bold mb-2"> Hosting</h2>
+<li> Serwis jest hostowany (technicznie utrzymywany) na serwerach operatora: seohost.pl b</li>
 
-        <p className="mb-4">
-            We are committed to ensuring that your information is secure. In order to prevent unauthorized access or
-            disclosure,
-            we have put in place suitable physical, electronic, and managerial procedures to safeguard and secure the
-            information we collect online.
-        </p>
-
-        <h2 className="text-2xl font-bold mb-2">Cookies</h2>
+        <h2 className="text-2xl font-bold mb-2"> Twoje prawa i dodatkowe informacje o sposobie wykorzystania danych </h2>
 
         <p className="mb-4">
             A cookie is a small file that asks permission to be placed on your computer's hard drive. Once you agree,
@@ -80,7 +59,7 @@ export default function Policy() {
             the data you choose to share with us.
         </p>
 
-        <h2 className="text-2xl font-bold mb-2">Links to Other Websites</h2>
+        <h2 className="text-2xl font-bold mb-2"> Informacje w formularzach</h2>
 
         <p className="mb-4">
             Our website may contain links to other websites of interest. However, once you have used these links to
@@ -97,10 +76,10 @@ export default function Policy() {
             the website in question.
         </p>
 
-        <h2 className="text-2xl font-bold mb-2">Controlling Your Personal Information</h2>
+        <h2 className="text-2xl font-bold mb-2"> Logi Administratora</h2>
 
         <p className="mb-4">
-            You may choose to restrict the collection or use of your personal information in the following ways:
+            You may choose to restrict the collection or use of your personControlling Your Personal al information in the following ways:
         </p>
 
         <ul className="list-disc list-inside mb-4">
@@ -122,6 +101,13 @@ export default function Policy() {
                 incorrect.
             </li>
         </ul>
+        <h2 className="text-2xl font-bold mb-2">  Istotne techniki marketingowe</h2>
+
+                <h2 className="text-2xl font-bold mb-2">   Informacja o plikach cookies</h2>
+
+
+                <h2 className="text-2xl font-bold mb-2">   Zarządzanie plikami cookies – jak w praktyce wyrażać i cofać zgodę</h2>
+
 
         <p className="mb-4">
             This privacy policy is subject to change without notice.
