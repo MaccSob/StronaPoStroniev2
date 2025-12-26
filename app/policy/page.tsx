@@ -6,55 +6,57 @@ export default function Policy() {
 
 <div className=" dark:bg-black">
     <div className="text-black dark:text-white container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-4">Polityka prywatności</h1>
+        <h1 className="text-3xl font-bold mb-6">Polityka prywatności</h1>
 
-        <h2 className="text-2xl font-bold mb-2">Informacje ogólne</h2>
+        <h2 className="text-2xl font-bold mb-4">1. Informacje ogólne</h2>
 
-        <ul className="list-disc list-inside mb-4">
+        <ul className="list-disc list-inside mb-6">
             <li> Niniejsza polityka dotyczy strony internetowej stronapostronie.pl </li>
             <li> Operatorem serwisu oraz Administratorem danych osobowych jest: Izabela Sobolewska, ul. Stanisława Kunickiego 59t/12, 54-616 Wrocław</li>
             <li> Kontakt z Administratorem jest możliwy za pośrednictwem poczty e-mail: izabela@stronapostronie.pl </li>
             <li> Operator jest Administratorem Twoich danych osobowych w odniesieniu do danych podanych dobrowolnie w Serwisie. </li>
             <li> Serwis wykorzystuje dane osobowe w następujących celach: 
-              <ol>  Obsługa zapytań przez formularz. </ol> 
+              <ol className="list-decimal list-inside">  Obsługa zapytań przez formularz. </ol> 
 
             </li>
             <li> Serwis realizuje funkcje pozyskiwania informacji o użytkownikach i ich zachowaniu w następujący sposób: 
-               <ol>  Poprzez dobrowolnie wprowadzone w formularzach dane, które zostają wprowadzone do systemów Operatora.  </ol> 
-                <ol>   Poprzez zapisywanie w urządzeniach końcowych plików cookie (tzw. „ciasteczka”).  </ol>
+               <ol>  <strong> a) </strong>Poprzez dobrowolnie wprowadzone w formularzach dane, które zostają wprowadzone do systemów Operatora.  </ol> 
+                <ol>   <strong> b) </strong>Poprzez zapisywanie w urządzeniach końcowych plików cookie (tzw. „ciasteczka”).  </ol>
             </li>
         </ul>
 
-        <h2 className="text-2xl font-bold mb-2"> Wybrane metody ochrony danych stosowane przez Operatora </h2>
+        <h2 className="text-2xl font-bold mb-4"> 2. Wybrane metody ochrony danych stosowane przez Operatora </h2>
 
-        <ul className="list-disc list-inside mb-4">
+        <ul className="list-disc list-inside mb-6">
            <li>
     Miejsca logowania i wprowadzania danych osobowych są chronione w warstwie transmisji (certyfikat SSL). Dzięki temu dane osobowe i dane logowania, wprowadzone na stronie, zostają zaszyfrowane w komputerze użytkownika i mogą być odczytane jedynie na docelowym serwerze.
 </li>
         </ul>
 
-        <h2 className="text-2xl font-bold mb-2"> Hosting</h2>
+        <h2 className="text-2xl font-bold mb-4"> 3.Hosting</h2>
 
-                   <ul className="list-disc list-inside mb-4">
+                   <ul className="list-disc list-inside mb-6">
 
 <li> Serwis jest hostowany (technicznie utrzymywany) na serwerach operatora: seohost.pl b</li>
 <li>  Firma hostingowa w celu zapewnienia niezawodności technicznej prowadzi logi na poziomie serwera. Zapisowi mogą podlegać: </li>
-<li>   Zasoby określone identyfikatorem URL (adresy żądanych zasobów – stron, plików). </li>
-<li> Czas nadejścia zapytania</li>
-<li> Czas wysłania odpowiedzi</li>
-<li> Adres URL strony poprzednio odwiedzanej przez użytkownika (referer link) – w przypadku gdy przejście do Serwisu nastąpiło przez odnośnik. </li>
-<li> Informacje o przeglądarce użytkownika</li>
-<li> Informacje o adresie IP. </li>
-<li> Informacje diagnostyczne związane z procesem samodzielnego zamawiania usług poprzez rejestratory na stronie. </li>
-<li>   Informacje związane z obsługą poczty elektronicznej kierowanej do Operatora oraz wysyłanej przez Operatora. </li>
+<ol><strong> a) </strong>   Zasoby określone identyfikatorem URL (adresy żądanych zasobów – stron, plików). </ol>
+<ol><strong> b) </strong> Czas nadejścia zapytania</ol>
+<ol> <strong> c) </strong>Czas wysłania odpowiedzi</ol>
+<ol> <strong> d) </strong>Nazwę stacji klienta – identyfikacja realizowana przez protokół http.</ol>
+<ol> <strong> e) </strong>Informacje o błędach jakie nastąpiły przy realizacji transakcji http.</ol>
+<ol> <strong> f) </strong>Adres URL strony poprzednio odwiedzanej przez użytkownika (referer link) – w przypadku gdy przejście do Serwisu nastąpiło przez odnośnik. </ol>
+<ol> <strong> g) </strong>Informacje o przeglądarce użytkownika</ol>
+<ol> <strong> h) </strong>Informacje o adresie IP. </ol>
+<ol><strong> i) </strong> Informacje diagnostyczne związane z procesem samodzielnego zamawiania usług poprzez rejestratory na stronie. </ol>
+<ol>  <strong> j) </strong> Informacje związane z obsługą poczty elektronicznej kierowanej do Operatora oraz wysyłanej przez Operatora. </ol>
  </ul>
        
-     <h2 className="text-2xl font-bold mb-2"> Twoje prawa i dodatkowe informacje o sposobie wykorzystania danych </h2>
+     <h2 className="text-2xl font-bold mb-4"> 4.Twoje prawa i dodatkowe informacje o sposobie wykorzystania danych </h2>
        
-           <ul className="list-disc list-inside mb-4">
+           <ul className="list-disc list-inside mb-6">
 
 <li> W niektórych sytuacjach Administrator ma prawo przekazywać Twoje dane osobowe innym odbiorcom, jeśli będzie to niezbędne do wykonania zawartej z Tobą umowy lub do zrealizowania obowiązków ciążących na Administratorze. Dotyczy to takich grup odbiorców: </li>
-<li>  Firma hostingowa na zasadzie powierzenia. </li>
+<ol>  <strong>a)</strong>  Firma hostingowa na zasadzie powierzenia. </ol>
 <li>   Twoje dane osobowe przetwarzane przez Administratora nie dłużej, niż jest to konieczne do wykonania związanych z nimi czynności określonych osobnymi przepisami (np. o prowadzeniu rachunkowości). W odniesieniu do danych marketingowych dane nie będą przetwarzane dłużej niż przez 3 lata.  </li>
 <li> Przysługuje Ci prawo żądania od Administratora: dostępu do danych osobowych Ciebie dotyczących, ich sprostowania, usunięcia, ograniczenia przetwarzania oraz przenoszenia danych. </li>
 <li> Przysługuje Ci prawo do złożenia sprzeciwu w zakresie przetwarzania wskazanego w pkt 3.2 wobec przetwarzania danych osobowych w celu wykonania prawnie uzasadnionych interesów realizowanych przez Administratora, w tym profilowania, przy czym prawo sprzeciwu nie będzie mogło być wykonane w przypadku istnienia ważnych prawnie uzasadnionych podstaw do przetwarzania, nadrzędnych wobec Ciebie interesów, praw i wolności, w szczególności ustalenia, dochodzenia lub obrony roszczeń. </li>
@@ -64,27 +66,27 @@ export default function Policy() {
 <li> W stosunku do Ciebie mogą być podejmowane czynności polegające na zautomatyzowanym podejmowaniu decyzji, w tym profilowaniu w celu świadczenia usług w ramach zawartej umowy oraz w celu prowadzenia przez Administratora marketingu bezpośredniego. </li>
 <li>  Dane osobowe nie są przekazywane od krajów trzecich w rozumieniu przepisów o ochronie danych osobowych. Oznacza to, że nie przesyłamy ich poza teren Unii Europejskiej. </li>
      </ul>
-        <h2 className="text-2xl font-bold mb-2"> Informacje w formularzach</h2>
+        <h2 className="text-2xl font-bold mb-4"> 5.Informacje w formularzach</h2>
           
-           <ul className="list-disc list-inside mb-4">
+           <ul className="list-disc list-inside mb-6">
 <li>  Serwis zbiera informacje podane dobrowolnie przez użytkownika, w tym dane osobowe, o ile zostaną one podane.  </li>
 <li>  Serwis może zapisać informacje o parametrach połączenia (oznaczenie czasu, adres IP).  </li>
 <li>  Serwis, w niektórych wypadkach, może zapisać informację ułatwiającą powiązanie danych w formularzu z adresem e-mail użytkownika wypełniającego formularz. W takim wypadku adres e-mail użytkownika pojawia się wewnątrz adresu URL strony zawierającej formularz.  </li>
 <li> Dane podane w formularzu są przetwarzane w celu wynikającym z funkcji konkretnego formularza, np. w celu dokonania procesu obsługi zgłoszenia serwisowego lub kontaktu handlowego, rejestracji usług itp. Każdorazowo kontekst i opis formularza w czytelny sposób informuje, do czego on służy.  </li>
 </ul>
 
-        <h2 className="text-2xl font-bold mb-2"> Logi Administratora</h2>
+        <h2 className="text-2xl font-bold mb-4"> 6.Logi Administratora</h2>
 
        
 
-        <ul className="list-disc list-inside mb-4">
+        <ul className="list-disc list-inside mb-6">
             <li>
                 Informacje zachowaniu użytkowników w serwisie mogą podlegać logowaniu. Dane te są wykorzystywane w celu administrowania serwisem.
 
             </li>
         </ul>
-        <h2 className="text-2xl font-bold mb-2">  Istotne techniki marketingowe</h2>
-        <ul className="list-disc list-inside mb-4">
+        <h2 className="text-2xl font-bold mb-4">  7.Istotne techniki marketingowe</h2>
+        <ul className="list-disc list-inside mb-6">
 
 <li>  Operator stosuje analizę statystyczną ruchu na stronie, poprzez Google Analytics (Google Inc. z siedzibą w USA). Operator nie przekazuje do operatora tej usługi danych osobowych, a jedynie zanonimizowane informacje. Usługa bazuje na wykorzystaniu ciasteczek w urządzeniu końcowym użytkownika. W zakresie informacji o preferencjach użytkownika gromadzonych przez sieć reklamową Google użytkownik może przeglądać i edytować informacje wynikające z plików cookies przy pomocy narzędzia:
 https://www.google.com/ads/preferences/  
@@ -97,8 +99,8 @@ https://www.google.com/ads/preferences/
             
         </ul>
 
-                <h2 className="text-2xl font-bold mb-2">   Informacja o plikach cookies</h2>
-        <ul className="list-disc list-inside mb-4">
+                <h2 className="text-2xl font-bold mb-4">   8.Informacja o plikach cookies</h2>
+        <ul className="list-disc list-inside mb-6">
 
 <li>  Serwis korzysta z plików cookies.  </li>
 <li> Pliki cookies (tzw. „ciasteczka”) stanowią dane informatyczne, w szczególności pliki tekstowe, które przechowywane są w urządzeniu końcowym Użytkownika Serwisu i przeznaczone są do korzystania ze stron internetowych Serwisu. Cookies zazwyczaj zawierają nazwę strony internetowej, z której pochodzą, czas przechowywania ich na urządzeniu końcowym oraz unikalny numer.  </li>
@@ -112,9 +114,9 @@ https://www.google.com/ads/preferences/
 
   </ul>
             
-               <h2 className="text-2xl font-bold mb-2">   Zarządzanie plikami cookies – jak w praktyce wyrażać i cofać zgodę</h2>
+               <h2 className="text-2xl font-bold mb-4">   9.Zarządzanie plikami cookies – jak w praktyce wyrażać i cofać zgodę</h2>
       
-        <ul className="list-disc list-inside mb-4">
+        <ul className="list-disc list-inside mb-6">
 <li>   Jeśli użytkownik nie chce otrzymywać plików cookies, może zmienić ustawienia przeglądarki. Zastrzegamy, że wyłączenie obsługi plików cookies niezbędnych dla procesów uwierzytelniania, bezpieczeństwa, utrzymania preferencji użytkownika może utrudnić, a w skrajnych przypadkach może uniemożliwić korzystanie ze stron www   </li>
 <li>   W celu zarządzania ustawienia cookies wybierz z listy poniżej przeglądarkę internetową, której używasz i postępuj zgodnie z instrukcjami:  </li>
 <li>  Serwis korzysta z plików cookies.  </li>
