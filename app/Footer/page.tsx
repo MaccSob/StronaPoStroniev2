@@ -9,16 +9,21 @@ const Footer = () => {
     <footer className="bg-white text-black p-10 dark:bg-black dark:text-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
-          <h3 className="font-bold mb-3">Foor</h3>
+          <h3 className="font-bold mb-3">Strona Po Stronie</h3>
           <ul>
             <li>
-              <Link href="#">
-                <span className="cursor-pointer hover:underline">loor</span>
+              <Link href="/">
+                <span className="cursor-pointer hover:underline">Strona główna</span>
               </Link>
             </li>
             <li>
-              <Link href="#">
-                <span className="cursor-pointer hover:underline">loor</span>
+              <Link href="/products">
+                <span className="cursor-pointer hover:underline">Cennik</span>
+              </Link>
+            </li>
+              <li>
+              <Link href="/portfolio">
+                <span className="cursor-pointer hover:underline">Portfolio</span>
               </Link>
             </li>
           </ul>
