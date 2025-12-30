@@ -66,6 +66,7 @@ const Footer = () => {
       </div>
       <div className="text-center pt-8 border-t border-gray-700 mt-8">
         <p>&copy; {new Date().getFullYear()} Strona po Stronie Wszelkie prawa zastrzeżone.</p>
+
       </div>
     </footer>
   );

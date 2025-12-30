@@ -5,6 +5,7 @@
   box-shadow: 0 0 20px rgba(28, 133, 68, 0.5);
 }
 
+
 .div1:hover::before {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
@@ -16,4 +17,5 @@
     margin: 5px;
     color: oklch(44.8% 0.119 151.328);
     font-weight: 600;
+    
 }

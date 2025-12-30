@@ -5,6 +5,7 @@ import { MdOutlineComputer } from "react-icons/md";
 
 export default function Products() {
   return (
+    
    <div className="min-h-screen flex items-center justify-center m-auto">
     <div className="space-y3 max-w-7xl">
            <div className="grid grid-cols-3 divide-x-3  gap-12 text-center sm:text-left ">
