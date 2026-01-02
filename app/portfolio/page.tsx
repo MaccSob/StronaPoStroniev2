@@ -6,7 +6,7 @@ export default function Portfolio() {
 
     <div className="min-h-screen flex items-center justify-center">
     <div className="space-y3 max-w-5xl">
-        <h1 className="text-5xl font-semibold text-center">Portfolio:</h1>
+        <h1 className="text-5xl font-semibold text-center">Okładki:</h1>
       
       <div className="imgcontainer">
         <img src="./szymanski.png" alt="" />
@@ -16,7 +16,17 @@ export default function Portfolio() {
                     <img src="./zacznij.jpg" alt="" />
                        <img src="./galopem.jpg" alt="" />
 </div>
+ <h1 className="text-5xl font-semibold text-center">Przykładowe strony:</h1>
 
+ <div className="imgcontainer">
+        <img src="./dzwiekstrona1.png" alt="" />
+           <img src="./dzwiekstrona2.jpg" alt="" />
+              <img src="./galopstrona.jpg" alt="" />
+                 <img src="./szymanskistrona.jpg" alt="" />
+                    <img src="./rosestrona.jpg" alt="" />
+                       <img src="./zacznijstrona1.jpg" alt="" />
+                             <img src="./zacznijstrona2.jpg" alt="" />
+</div>
     </div>
 
   </div>
