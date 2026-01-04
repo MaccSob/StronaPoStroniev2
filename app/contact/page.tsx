@@ -18,9 +18,9 @@ export default function Contact() {
         />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Skontaktuj się ze mną</h2>
-            <h3 className="flex items-center text-2xl m-8 "><FiMail size={45}/> Izabela@stronapostronie.pl</h3>
-        <p className="mt-2 text-lg/8 text-gray-600">Lub skorzystaj z poniższego formularza</p>
+        <h2 className="text-2xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Skontaktuj się ze mną</h2>
+            <h3 className="flex items-center text-2xl m-8  text-center items-center justify-center"><FiMail size={45}/> Izabela@stronapostronie.pl</h3>
+        <p className="mt-2 text-lg/8 text-gray-800">Lub skorzystaj z poniższego formularza</p>
       </div>
       <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -34,6 +34,7 @@ export default function Contact() {
                 name="first-name"
                 type="text"
                 autoComplete="given-name"
+                required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
               />
             </div>
@@ -48,6 +49,7 @@ export default function Contact() {
                 name="last-name"
                 type="text"
                 autoComplete="family-name"
+                required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
               />
             </div>
@@ -63,6 +65,7 @@ export default function Contact() {
                 name="email"
                 type="email"
                 autoComplete="email"
+                required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
               />
             </div>
@@ -89,6 +92,7 @@ export default function Contact() {
                   name="phone-number"
                   type="text"
                   placeholder="123-456-789"
+                  min="9" max="9"
                   className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
                 />
               </div>
@@ -96,7 +100,7 @@ export default function Contact() {
           </div>
           <div className="sm:col-span-2">
             <label htmlFor="message" className="block text-sm/6 font-semibold text-gray-900">
-              Message
+              Wiadomość
             </label>
             <div className="mt-2.5">
               <textarea
@@ -105,6 +109,7 @@ export default function Contact() {
                 rows={4}
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                 defaultValue={''}
+                required
               />
             </div>
           </div>
