@@ -19,7 +19,7 @@ export default function Contact() {
       </div>
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-2xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Skontaktuj się ze mną</h2>
-            <h3 className="flex items-center text-2xl m-8  text-center items-center justify-center"><FiMail size={45}/> Izabela@stronapostronie.pl</h3>
+            <h3 className="flex items-center text-2xl m-8  text-center items-center justify-center"><FiMail size={45}/> izabela@stronapostronie.pl</h3>
         <p className="mt-2 text-lg/8 text-gray-800">Lub skorzystaj z poniższego formularza</p>
       </div>
       <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
@@ -70,34 +70,7 @@ export default function Contact() {
               />
             </div>
           </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="phone-number" className="block text-sm/6 font-semibold text-gray-900">
-              Numer telefonu
-            </label>
-            <div className="mt-2.5">
-              <div className="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
-                <div className="grid shrink-0 grid-cols-1 focus-within:relative">
-                  <select
-                    id="country"
-                    name="country"
-                    autoComplete="country"
-                    aria-label="Country"
-                    className="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pr-7 pl-3.5 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  >
-                    <option>48</option>
-                  </select>
-                </div>
-                <input
-                  id="phone-number"
-                  name="phone-number"
-                  type="text"
-                  placeholder="123-456-789"
-                  min="9" max="9"
-                  className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-                />
-              </div>
-            </div>
-          </div>
+
           <div className="sm:col-span-2">
             <label htmlFor="message" className="block text-sm/6 font-semibold text-gray-900">
               Wiadomość
