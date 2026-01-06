@@ -8,12 +8,22 @@ text-wrap: wrap;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 3.5s steps(30, end),
+    typing 2.5s steps(30, end),
     blink-caret .5s step-end infinite;
 }
+.wrapper {
+  opacity:0;
+  left: -100%;
+  border-radius: 10px;
+  animation: smooth-appear 12s ease forwards;
+}
 
-
-
+@keyframes smooth-appear {
+  to{
+    left: 20px;
+    opacity:1;
+  }
+}
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }

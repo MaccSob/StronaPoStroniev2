@@ -2,7 +2,9 @@
 import React, { useState } from "react";
 import './styles/style.scss'
 import people from "./data";
+
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
+import { ReadMore } from "./readMore";
 
 
 
@@ -41,10 +43,11 @@ const Review = () => {
 
 
   return (
-    <article className="review">
+    <article className="review dark:text-black">
       <h4 className="author">{name}</h4>
       <p className="job">{job}</p>
-      <p className="info">{text}</p>
+        <ReadMore id="read-more-text" text={text} />
+
       <div className="button-container">
         <button className="prev-btn" onClick={prevPerson}>
           <FaChevronLeft />

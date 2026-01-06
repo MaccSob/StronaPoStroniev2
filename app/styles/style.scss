@@ -27,8 +27,8 @@
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-green-dark: hsl(125, 89%, 32%);
+  --clr-green-light: hsl(125, 67%, 44%);
   --clr-black: #222;
   --transition: all 0.3s linear;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -60,7 +60,7 @@
 .job {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
-  color: var(--clr-primary-5);
+  color: var(--clr-green-dark);
   font-size: 1rem;
 }
 .info {
@@ -69,7 +69,7 @@
 }
 .prev-btn,
 .next-btn {
-  color: var(--clr-primary-7);
+  color: var(--clr-green-dark);
   font-size: 1.25rem;
   background: transparent;
   border-color: transparent;

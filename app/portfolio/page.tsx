@@ -1,5 +1,5 @@
 import '../styles/portfolio.scss'
-
+import { ReadMore } from '../readMore';
 
 export default function Portfolio() {
   return (
@@ -28,7 +28,6 @@ export default function Portfolio() {
                              <img src="./zacznijstrona2.jpg" alt="" />
 </div>
     </div>
-
   </div>
   );
 }
