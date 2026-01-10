@@ -6,6 +6,21 @@ export default function Portfolio() {
 
     <div className="min-h-screen flex items-center justify-center">
     <div className="space-y3 max-w-5xl">
+
+ <h1 className="text-5xl font-semibold text-center">Przykładowe strony:</h1>
+
+<div className="container">
+  <img className='photo'  src="./dzwiekstrona1.jpg" alt="" />
+  <img className='photo'  src="./dzwiekstrona2.jpg" alt="" />
+  <img className='photo'  src="/galopstrona.jpg" alt="" />
+ <img className='photo'  src="./szymanskistrona.jpg" alt="" />
+  <img className='photo'  src="./rosestrona.jpg" alt="" />
+  <img className='photo'  src="/zacznijstrona1.jpg" alt="" />
+    <img className='photo'  src="/zacznijstrona2.jpg" alt="" />
+
+</div>
+
+
         <h1 className="text-5xl font-semibold text-center">Okładki:</h1>
       
       <div className="imgcontainer">
@@ -16,17 +31,9 @@ export default function Portfolio() {
                     <img src="./zacznij.jpg" alt="" />
                        <img src="./galopem.jpg" alt="" />
 </div>
- <h1 className="text-5xl font-semibold text-center">Przykładowe strony:</h1>
 
- <div className="imgcontainer">
-        <img src="./dzwiekstrona1.png" alt="" />
-           <img src="./dzwiekstrona2.jpg" alt="" />
-              <img src="./galopstrona.jpg" alt="" />
-                 <img src="./szymanskistrona.jpg" alt="" />
-                    <img src="./rosestrona.jpg" alt="" />
-                       <img src="./zacznijstrona1.jpg" alt="" />
-                             <img src="./zacznijstrona2.jpg" alt="" />
-</div>
+
+
     </div>
   </div>
   );

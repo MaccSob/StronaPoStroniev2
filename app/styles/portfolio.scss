@@ -2,13 +2,57 @@
 .imgcontainer {
     display: flex;
     justify-content: center;
-    width: 350px;
-    height: 350px;
+    width: 650px;
+    height: 450px;
+    gap: 15px;
 }
 .imgcontainer>img {
   transition: transform .5s ease;
 }
 .imgcontainer>img:hover {
-        transform: scale(2.0);
+        transform: scale(1.5);
         cursor: pointer;
 }
+//how many images we have
+$slides: 4;
+
+// how much we want each slide to show
+$time_per_slide: 4;
+
+// total time needed for full animation
+$total_animation_time: $time_per_slide * $slides;
+
+.container{
+  margin:50px auto;
+  width:500px;
+  height:700px;
+  overflow:hidden;
+  border:10px solid;
+  border-top-color:#0a6b17;
+  border-left-color:#63a50e;
+  border-bottom-color:#035f22;
+  border-right-color:#03330f;
+  position:relative;
+
+}
+.photo{
+  position:absolute;
+  animation:round #{$total_animation_time}s infinite;
+  opacity:0;
+  
+}
+@keyframes round{   
+  25%{
+    opacity:1;
+  }
+  40%{
+    opacity:0;
+  }
+} 
+
+@for $index from 1 to $slides + 1{
+  img:nth-child(#{$index}){
+    animation-delay:#{$total_animation_time - $time_per_slide * $index}s
+  }
+}
+   
