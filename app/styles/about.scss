@@ -1,7 +1,7 @@
 
-.container h1 {
+.namecontainer h1 {
 text-wrap: wrap;
-    font-size: 30px;
+    font-size: 24px;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid green; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -15,7 +15,7 @@ text-wrap: wrap;
   opacity:0;
   left: -100%;
   border-radius: 10px;
-  animation: smooth-appear 12s ease forwards;
+  animation: smooth-appear 15s ease forwards;
 }
 
 @keyframes smooth-appear {

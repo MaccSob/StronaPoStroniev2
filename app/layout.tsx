@@ -34,6 +34,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
         <Navbar />
         {children}
+          <Footer/>
         </ThemeProvider>
       </body>
     </html>

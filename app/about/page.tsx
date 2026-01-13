@@ -11,7 +11,7 @@ export default function About() {
             <div className="w-full justify-start items-center gap-8 grid lg:grid-cols-2 grid-cols-1">
                 <div className="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
                     <div className="w-full flex-col justify-start lg:items-start items-center gap-4 flex">
-                      <div className="container">
+                      <div className="namecontainer">
                      <h1 className="text-gray-800 font-bold font-manrope leading-normal lg:text-start text-center dark:text-white"> Cześć, nazywam się <span className="text-green-800"> Izabela Sobolewska. </span></h1>
                      </div>
                      <div className="wrapper">
@@ -21,10 +21,11 @@ export default function About() {
                     </div>
                     </div>
                 </div>
-                <img className="lg:mx-12 mx-auto h-full rounded-3xl object-cover" src="https://stronapostronie.pl/assets/image/Izabela.jpg" alt="pic" />
+                <img className="lg:mx-12 mx-auto h-full rounded-3xl object-cover" src="./iza.jpg" alt="pic" />
             </div>
         </div>
     </section>
+    
   </div>
   );
 }
