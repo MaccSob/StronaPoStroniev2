@@ -18,7 +18,7 @@ export default function Contact() {
         />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-2xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Skontaktuj się ze mną</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl text-shadow-lg/20">Skontaktuj się ze mną</h2>
             <h3 className="flex items-center text-2xl m-8  text-center items-center justify-center"><FiMail size={45}/> izabela@stronapostronie.pl</h3>
         <p className="mt-2 text-lg/8 text-gray-800">Lub skorzystaj z poniższego formularza</p>
       </div>

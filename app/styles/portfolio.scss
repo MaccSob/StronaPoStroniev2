@@ -15,7 +15,7 @@
         cursor: pointer;
 }
 //how many images we have
-$slides: 4;
+$slides: 18;
 
 // how much we want each slide to show
 $time_per_slide: 4;
@@ -36,7 +36,7 @@ $total_animation_time: $time_per_slide * $slides;
   position:relative;
 
 }
-.container>img {
+.container {
       transition: transform .5s ease;
 }
 .photo{
