@@ -15,10 +15,10 @@
         cursor: pointer;
 }
 //how many images we have
-$slides: 18;
+$slides: 14;
 
 // how much we want each slide to show
-$time_per_slide: 4;
+$time_per_slide: 8;
 
 // total time needed for full animation
 $total_animation_time: $time_per_slide * $slides;

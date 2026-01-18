@@ -1,6 +1,35 @@
+"use client";
+import emailjs from '@emailjs/browser';
+import { useState } from "react";
 import { FiMail } from "react-icons/fi";
 
+
 export default function Contact() {
+
+   const [userInput, setUserInput] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    const { name, value } = e.target;
+    setUserInput({
+      ...userInput,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+  }
+
   return (
   
    <div className="min-h-screen flex items-center justify-center">
@@ -22,7 +51,7 @@ export default function Contact() {
             <h3 className="flex items-center text-2xl m-8  text-center items-center justify-center"><FiMail size={45}/> izabela@stronapostronie.pl</h3>
         <p className="mt-2 text-lg/8 text-gray-800">Lub skorzystaj z poniższego formularza</p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm/6 font-semibold text-gray-900">
@@ -33,6 +62,8 @@ export default function Contact() {
                 id="first-name"
                 name="first-name"
                 type="text"
+                value={userInput.firstname}
+                onChange={handleChange}
                 autoComplete="given-name"
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
@@ -48,6 +79,8 @@ export default function Contact() {
                 id="last-name"
                 name="last-name"
                 type="text"
+                value={userInput.firstname}
+                onChange={handleChange}
                 autoComplete="family-name"
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
@@ -65,6 +98,8 @@ export default function Contact() {
                 name="email"
                 type="email"
                 autoComplete="email"
+                value={userInput.email}
+          onChange={handleChange}
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
               />
@@ -79,6 +114,8 @@ export default function Contact() {
               <textarea
                 id="message"
                 name="message"
+                  value={userInput.message}
+          onChange={handleChange}
                 rows={4}
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                 defaultValue={''}

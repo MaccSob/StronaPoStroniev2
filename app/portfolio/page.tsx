@@ -34,11 +34,8 @@ export default function Portfolio() {
     <img className='photo'  src="./dzwiek4.jpg" alt="" />
 
         <img className='photo'  src="./galopstrona1.jpg" alt="" />
-            <img className='photo'  src="./galopstrona2.jpg" alt="" />
                 <img className='photo'  src="./galopstrona3.jpg" alt="" />
-                    <img className='photo'  src="./galopstrona4.jpg" alt="" />
 
-                     <img className='photo'  src="./szymanskistrona1.jpg" alt="" />
                      <img className='photo'  src="./szymanskistrona2.jpg" alt="" />
                      <img className='photo'  src="./szymanskistrona3.jpg" alt="" />
                      <img className='photo'  src="./szymanskistrona4.jpg" alt="" />
@@ -47,7 +44,6 @@ export default function Portfolio() {
                        <img className='photo'  src="./rosestrona2.jpg" alt="" />
                         <img className='photo'  src="./rosestrona3.jpg" alt="" />
 
-                       <img className='photo'  src="./zacznijstrona1.jpg" alt="" />
                         <img className='photo'  src="./zacznijstrona2.jpg" alt="" />
                      <img className='photo'  src="./zacznijstrona3.jpg" alt="" />
                      
