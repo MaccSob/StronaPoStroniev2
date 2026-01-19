@@ -17,7 +17,7 @@ export default function Portfolio() {
         <img src="./szymanski.png" alt="" />
            <img src="./dzwiekoterapia.jpg" alt="" />
               <img src="./rose.jpg" alt="" />
-                 <img src="./szymanski.jpg" alt="" />
+                 <img src="./szymanski.png" alt="" />
                     <img src="./zacznij.jpg" alt="" />
                        <img src="./galopem.jpg" alt="" />
 </div>
