@@ -21,7 +21,7 @@ export default function About() {
                     </div>
                     </div>
                 </div>
-                <img className="lg:mx-12 mx-auto h-full rounded-3xl object-cover" src="./iza.jpg" alt="pic" />
+                <img className="lg:mx-12 mx-auto h-max rounded-3xl object-cover" src="./iza.jpg" alt="pic" />
             </div>
         </div>
     </section>
