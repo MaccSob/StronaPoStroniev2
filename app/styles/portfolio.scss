@@ -14,53 +14,5 @@
         transform: scale(1.5);
         cursor: pointer;
 }
-//how many images we have
-$slides: 14;
 
-// how much we want each slide to show
-$time_per_slide: 8;
 
-// total time needed for full animation
-$total_animation_time: $time_per_slide * $slides;
-
-.container{
-  margin:50px auto;
-  width:500px;
-  height:750px;
-  overflow:hidden;
-  border:10px solid;
-  border-top-color:#0a6b17;
-  border-left-color:#63a50e;
-  border-bottom-color:#035f22;
-  border-right-color:#03330f;
-  position:relative;
-
-}
-.container {
-      transition: transform .5s ease;
-}
-.photo{
-  position:absolute;
-  animation:round #{$total_animation_time}s infinite;
-  opacity:0;
-  
-  
-}
-.container:hover {
-    transform: scale(1.3);
-}
-@keyframes round{   
-  25%{
-    opacity:1;
-  }
-  40%{
-    opacity:0;
-  }
-} 
-
-@for $index from 1 to $slides + 1{
-  img:nth-child(#{$index}){
-    animation-delay:#{$total_animation_time - $time_per_slide * $index}s
-  }
-}
-   
