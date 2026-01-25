@@ -13,7 +13,8 @@ export default function Navbar() {
   const navItems = [
     { name: "O mnie", href: "/about" },
     { name: "Portfolio", href: "/portfolio" },
-    { name: "Contact", href: "/contact" },
+    { name: "Kontakt", href: "/contact" },
+      { name: "Oferta", href: "/products" },
     
   ];
 
@@ -94,7 +95,9 @@ export default function Navbar() {
                     {item.name}
                   </Link>
                 </li>
+                
               ))}
+                                          <ThemeToggle/>
             </ul>
           </div>
 

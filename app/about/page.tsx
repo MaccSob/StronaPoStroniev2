@@ -12,7 +12,7 @@ export default function About() {
                 <div className="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
                     <div className="w-full flex-col justify-start lg:items-start items-center gap-4 flex">
                       <div className="namecontainer">
-                     <h1 className="text-gray-800 font-bold font-manrope leading-normal lg:text-start text-center dark:text-white"> Cześć, nazywam się <span className="text-green-800"> Izabela Sobolewska. </span></h1>
+                     <h2 className="text-gray-800 font-bold font-manrope leading-normal lg:text-start text-center dark:text-white text-3xl"> Cześć, nazywam się <span className="text-green-800 "> Izabela Sobolewska. </span></h2>
                      </div>
                      <div className="wrapper">
                         <h2 className="text-gray-900 text-2xl font-bold font-manrope leading-normal lg:text-start text-center dark:text-white"> i zajmuję się korektą, redakcją i składem tekstów. Uwielbiam pracować ze słowami i dbać o to, aby każdy tekst był poprawny, czytelny i atrakcyjny. </h2>
