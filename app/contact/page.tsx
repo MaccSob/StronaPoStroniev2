@@ -54,8 +54,8 @@ export default function Contact() {
 
   return (
   
-   <div className="min-h-screen flex items-center justify-center">
- <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+   <div className="min-h-screen flex items-center justify-center text-center">
+ <div className="px-6 py-24 sm:py-32 lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -69,14 +69,14 @@ export default function Contact() {
         />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-2xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl text-shadow-lg/20">Skontaktuj się ze mną</h2>
-            <h3 className="flex items-center text-2xl m-8  text-center items-center justify-center"><FiMail size={45}/> izabela@stronapostronie.pl</h3>
-        <p className="mt-2 text-lg/8 text-gray-800">Lub skorzystaj z poniższego formularza</p>
+        <h2 className="text-2xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl text-shadow-lg/20 dark:text-white">Skontaktuj się ze mną</h2>
+            <h3 className="flex items-center text-2xl m-8 text-center items-center justify-center "><FiMail size={45}/> izabela@stronapostronie.pl</h3>
+        <p className="mt-2 text-lg/8 text-gray-800 dark:text-white">Lub skorzystaj z poniższego formularza</p>
       </div>
       <form action="#" method="POST" onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="firstname" className="block text-sm/6 font-semibold text-gray-900">
+            <label htmlFor="firstname" className="block text-sm/6 font-semibold text-gray-900 dark:text-white">
               Imię
             </label>
             <div className="mt-2.5">
@@ -92,7 +92,7 @@ export default function Contact() {
             </div>
           </div>
           <div>
-            <label htmlFor="lastname" className="block text-sm/6 font-semibold text-gray-900">
+            <label htmlFor="lastname" className="block text-sm/6 font-semibold text-gray-900 dark:text-white">
               Nazwisko
             </label>
             <div className="mt-2.5">
@@ -109,7 +109,7 @@ export default function Contact() {
           </div>
 
           <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm/6 font-semibold text-gray-900">
+            <label htmlFor="email" className="block text-sm/6 font-semibold text-gray-900 dark:text-white">
               E-mail
             </label>
             <div className="mt-2.5">
@@ -125,7 +125,7 @@ export default function Contact() {
           </div>
 
           <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm/6 font-semibold text-gray-900">
+            <label htmlFor="message" className="block text-sm/6 font-semibold text-gray-900 dark:text-white">
               Wiadomość
             </label>
             <div className="mt-2.5">
@@ -152,9 +152,9 @@ export default function Contact() {
                 />
               </div>
             </div>
-            <label htmlFor="agree-to-policies" className="text-sm/6 text-gray-600">
+            <label htmlFor="agree-to-policies" className="text-sm/6 text-gray-600 dark:text-white">
               Wybierając tę ​​opcję, wyrażasz zgodę na naszą politykę prywatności.
-              <a href="/policy" className="font-semibold whitespace-nowrap text-green-900">
+              <a href="/policy" className="font-semibold whitespace-nowrap text-green-900 dark:text-white">
                   Polityka prywatności
               </a>
               .
