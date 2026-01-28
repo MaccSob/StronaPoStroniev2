@@ -1,61 +1,19 @@
 "use client";
+import { useActionState } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify"; 
 import emailjs from '@emailjs/browser';
 import { FiMail } from "react-icons/fi";
+import { FormState, submitContactForm } from "./actions";
 
 export default function Contact() {
 
-   const [userInput, setUserInput] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    message: ""
-  });
-
-  const handleChange = (e: { target: { firstname: any; value: any; }; }) => {
-    const { firstname, value } = e.target;
-    setUserInput({
-      ...userInput,
-      [firstname]: value
-    });
-  };
-
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
-    const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
-
-    try {
-      const emailParams = {
-        firstname: userInput.firstname,
-        lastname: userInput.lastname,
-        email: userInput.email,
-        message: userInput.message
-      };
-
-      const res = await emailjs.send(serviceID, templateID, emailParams, userID);
-
-      if (res.status === 200) {
-        toast.success("Message sent successfully!");
-        setUserInput({
-          firstname: "",
-          lastname: "",
-          email: "",
-          message: ""
-        });
-      }
-    } catch (error) {
-      toast.error("Failed to send message. Please try again later.");
-    }
-  };
-
+  const [currentState, formAction, isPending] = useActionState<FormState,FormData>(submitContactForm,{})
+   
   return (
   
    <div className="min-h-screen flex items-center justify-center text-center">
- <div className="w-full py-2 px-1 outline-none mb-4">
+ <div className="px-6 py-24 sm:py-32 lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -73,7 +31,7 @@ export default function Contact() {
             <h3 className="flex items-center text-2xl m-8 text-center items-center justify-center "><FiMail size={45}/> izabela@stronapostronie.pl</h3>
         <p className="mt-2 text-lg/8 text-gray-800 dark:text-white">Lub skorzystaj z poniższego formularza</p>
       </div>
-      <form action="#" method="POST" onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form action={formAction} method="POST"  className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="firstname" className="block text-sm/6 font-semibold text-gray-900 dark:text-white">
@@ -84,8 +42,8 @@ export default function Contact() {
                 id="firstname"
                 name="firstname"
                 type="text"
-               value={userInput.firstname}
                 autoComplete="given-name"
+                disabled={isPending}
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
               />
@@ -100,8 +58,8 @@ export default function Contact() {
                 id="lastname"
                 name="lastname"
                 type="text"
-                 value={userInput.lastname}
                 autoComplete="family-name"
+                disabled={isPending}
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
               />
@@ -118,6 +76,7 @@ export default function Contact() {
                 name="email"
                 type="email"
                 autoComplete="email"
+                disabled={isPending}
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
               />
@@ -133,8 +92,9 @@ export default function Contact() {
                 id="message"
                 name="message"
                 rows={4}
-                className="resize block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                 defaultValue={''}
+                disabled={isPending}
                 required
               />
             </div>
@@ -168,9 +128,11 @@ export default function Contact() {
         <div className="mt-10">
           <button
             type="submit"
+            disabled={isPending}
             className="block w-full rounded-md bg-green-900 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Wyślij
+            {isPending ? "Wysyłanie" : "Wyślij wiadomość"}
           </button>
         </div>
       </form>
