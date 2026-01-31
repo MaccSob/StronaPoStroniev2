@@ -1,15 +1,55 @@
 "use client";
-import { useActionState } from "react";
-import { useState } from "react";
-import { toast } from "react-toastify"; 
-import emailjs from '@emailjs/browser';
 import { FiMail } from "react-icons/fi";
-import { FormState, submitContactForm } from "./actions";
+import { useState } from "react";
+import { toast } from "react-toastify"; // For notifications
+import emailjs from '@emailjs/browser';
+
 
 export default function Contact() {
 
-  const [currentState, formAction, isPending] = useActionState<FormState,FormData>(submitContactForm,{})
-   
+     const [userInput, setUserInput] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserInput({
+      ...userInput,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    try {
+      const emailParams = {
+        name: userInput.name,
+        email: userInput.email,
+        message: userInput.message
+      };
+
+      const res = await emailjs.send(serviceID, templateID, emailParams, userID);
+
+      if (res.status === 200) {
+        toast.success("Message sent successfully!");
+        setUserInput({
+          name: "",
+          email: "",
+          message: ""
+        });
+      }
+    } catch (error) {
+      toast.error("Failed to send message. Please try again later.");
+    }
+  };
+  
   return (
   
    <div className="min-h-screen flex items-center justify-center text-center">
@@ -31,35 +71,18 @@ export default function Contact() {
             <h3 className="flex items-center text-2xl m-8 text-center items-center justify-center "><FiMail size={45}/> izabela@stronapostronie.pl</h3>
         <p className="mt-2 text-lg/8 text-gray-800 dark:text-white">Lub skorzystaj z poniższego formularza</p>
       </div>
-      <form action={formAction} method="POST"  className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form method="POST"  className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="firstname" className="block text-sm/6 font-semibold text-gray-900 dark:text-white">
-              Imię
+            <label htmlFor="name" className="block text-sm/6 font-semibold text-gray-900 dark:text-white">
+              Imię i Nazwisko
             </label>
             <div className="mt-2.5">
               <input
-                id="firstname"
-                name="firstname"
+                id="name"
+                name="name"
                 type="text"
                 autoComplete="given-name"
-                disabled={isPending}
-                required
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
-              />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="lastname" className="block text-sm/6 font-semibold text-gray-900 dark:text-white">
-              Nazwisko
-            </label>
-            <div className="mt-2.5">
-              <input
-                id="lastname"
-                name="lastname"
-                type="text"
-                autoComplete="family-name"
-                disabled={isPending}
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
               />
@@ -76,7 +99,6 @@ export default function Contact() {
                 name="email"
                 type="email"
                 autoComplete="email"
-                disabled={isPending}
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
               />
@@ -94,7 +116,6 @@ export default function Contact() {
                 rows={4}
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                 defaultValue={''}
-                disabled={isPending}
                 required
               />
             </div>
@@ -128,11 +149,9 @@ export default function Contact() {
         <div className="mt-10">
           <button
             type="submit"
-            disabled={isPending}
             className="block w-full rounded-md bg-green-900 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Wyślij
-            {isPending ? "Wysyłanie" : "Wyślij wiadomość"}
+        
           </button>
         </div>
       </form>

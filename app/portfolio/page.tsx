@@ -1,5 +1,6 @@
 import '../styles/portfolio.scss'
 
+
 export default function Portfolio() {
   return (
 
@@ -14,7 +15,7 @@ export default function Portfolio() {
         <h1 className="text-5xl font-semibold text-center text-shadow-lg/20">Okładki:</h1>
       
       <div className="imgcontainer">
-        <img src="./szymanski.png" alt="" />
+     <img src="./szymanski.png" alt="" />
            <img src="./dzwiekoterapia.jpg" alt="" />
               <img src="./rose.jpg" alt="" />
                  <img src="./szymanski.png" alt="" />
@@ -47,12 +48,8 @@ export default function Portfolio() {
                         <img className='photo'  src="./zacznijstrona2.jpg" alt="" />
                      <img className='photo'  src="./zacznijstrona3.jpg" alt="" />
                      
-
-
-
-
-
 </div>
+
     </div>
   </div>
   );
