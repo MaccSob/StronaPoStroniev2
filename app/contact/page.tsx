@@ -13,7 +13,7 @@ export default function Contact() {
     message: ""
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setUserInput({
       ...userInput,
@@ -21,7 +21,7 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -49,7 +49,7 @@ export default function Contact() {
       toast.error("Failed to send message. Please try again later.");
     }
   };
-  
+
   return (
   
    <div className="min-h-screen flex items-center justify-center text-center">
@@ -83,6 +83,8 @@ export default function Contact() {
                 name="name"
                 type="text"
                 autoComplete="given-name"
+                value={userInput.name}
+          onChange={handleChange}
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
               />
@@ -99,6 +101,8 @@ export default function Contact() {
                 name="email"
                 type="email"
                 autoComplete="email"
+                 value={userInput.email}
+          onChange={handleChange}
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
               />
@@ -114,6 +118,8 @@ export default function Contact() {
                 id="message"
                 name="message"
                 rows={4}
+                value={userInput.message}
+          onChange={handleChange}
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                 defaultValue={''}
                 required
