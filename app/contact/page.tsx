@@ -7,21 +7,14 @@ import emailjs from '@emailjs/browser';
 
 export default function Contact() {
 
-     const [userInput, setUserInput] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
+    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setUserInput({
-      ...userInput,
-      [name]: value
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -29,21 +22,10 @@ export default function Contact() {
     const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
     try {
-      const emailParams = {
-        name: userInput.name,
-        email: userInput.email,
-        message: userInput.message
-      };
-
-      const res = await emailjs.send(serviceID, templateID, emailParams, userID);
-
-      if (res.status === 200) {
+      const response = await emailjs.send(serviceID, templateID, formData, userID);
+      if (response.status === 200) {
         toast.success("Message sent successfully!");
-        setUserInput({
-          name: "",
-          email: "",
-          message: ""
-        });
+        setFormData({ name: "", email: "", message: "" });
       }
     } catch (error) {
       toast.error("Failed to send message. Please try again later.");
@@ -71,7 +53,7 @@ export default function Contact() {
             <h3 className="flex items-center text-2xl m-8 text-center items-center justify-center "><FiMail size={45}/> izabela@stronapostronie.pl</h3>
         <p className="mt-2 text-lg/8 text-gray-800 dark:text-white">Lub skorzystaj z poniższego formularza</p>
       </div>
-      <form method="POST"  className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form onSubmit={handleSubmit} method="POST"  className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="name" className="block text-sm/6 font-semibold text-gray-900 dark:text-white">
@@ -83,7 +65,7 @@ export default function Contact() {
                 name="name"
                 type="text"
                 autoComplete="given-name"
-                value={userInput.name}
+                value={formData.name}
           onChange={handleChange}
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
@@ -101,7 +83,7 @@ export default function Contact() {
                 name="email"
                 type="email"
                 autoComplete="email"
-                 value={userInput.email}
+              value={formData.email}
           onChange={handleChange}
                 required
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
@@ -118,10 +100,9 @@ export default function Contact() {
                 id="message"
                 name="message"
                 rows={4}
-                value={userInput.message}
+                value={formData.message}
           onChange={handleChange}
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
-                defaultValue={''}
                 required
               />
             </div>
@@ -157,7 +138,7 @@ export default function Contact() {
             type="submit"
             className="block w-full rounded-md bg-green-900 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-        
+        Wyślij
           </button>
         </div>
       </form>
