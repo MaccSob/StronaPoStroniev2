@@ -20,13 +20,15 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className="block w-full max-w-screen px-4 py-4 mx-auto bg-white bg-opacity-90 sticky top-3 shadow lg:px-8 backdrop-blur-lg backdrop-saturate-150 z-[9999] dark:bg-black text-white dark:text-white transition-all duration-750 ease-out">
-        <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
+      <nav className=" block w-full max-w-screen px-4 py-4 mx-auto bg-white bg-opacity-90 sticky top-3 shadow lg:px-8 backdrop-blur-lg backdrop-saturate-150 z-[9999] dark:bg-black text-white dark:text-white transition-all duration-750 ease-out">
+        <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800 dark:text-white dark:-text-shadow-lg/20">
           <Link
             href="/"
-            className="mr-4 block cursor-pointer py-1.5 text-black-600 font-bold text-2xl"
+            
+            className="mr-4 block cursor-pointer py-1.5 text-black-600 font-bold text-2xl "
           >
             Strona po Stronie
+            
           </Link>
 
           <div className="lg:hidden">
@@ -56,13 +58,13 @@ export default function Navbar() {
           {/* Mobile Menu */}
           <div
             className={`fixed top-0 left-0 min-h-screen w-64 bg-slate-100 shadow-lg transform transition-transform duration-300 ease-in-out dark:bg-black text-black dark:text-white transition-all duration-750 ease-out ${
-              isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+              isMobileMenuOpen ? "translate-x-0" : "-translate-x-full "
             } lg:hidden z-50`}
           >
-            <div className="flex flex-row items-center border-b pb-4">
+            <div className="flex flex-row items-center border-b pb-4 ">
               <Link
                 href="/"
-                className="cursor-pointer text-green-800 font-bold text-xl pt-4 ps-4"
+                className="cursor-pointer text-green-800 font-bold text-xl pt-4 ps-4 "
               >
                 Strona po Stronie
               </Link>
@@ -85,11 +87,11 @@ export default function Navbar() {
                 </svg>
               </button>
             </div>
-            <ul className="flex flex-col h-full gap-4 p-4">
+            <ul className="flex flex-col h-full gap-4 p-4 ">
               {navItems.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center p-1 text-lg gap-x-2 text-slate-600 hover:text-green-800"
+                  className="flex items-center p-1 text-lg gap-x-2 text-slate-600 hover:text-green-800  "
                 >
                   <Link onClick={() => {setIsMobileMenuOpen(false);}} href={item.href} className="flex items-center">
                     {item.name}
@@ -103,12 +105,12 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden lg:block">
-            <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+            <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
               
               {navItems.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center p-1 text-lg gap-x-2 text-slate-600 hover:text-green-800"
+                  className="flex items-center p-1 text-lg gap-x-2 text-slate-600 hover:text-green-800 dark:text-white dark:-text-shadow-lg/20"
                 >
                   <Link href={item.href} className="flex items-center">
                     {item.name}
