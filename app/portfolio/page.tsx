@@ -27,32 +27,6 @@ export default function Portfolio() {
                              <h4 className=''>Galopem do marzeń </h4>
 </div>
 
- <h1 className="text-5xl font-semibold text-center text-shadow-lg/20">Przykładowe strony:</h1>
- <p className="text-gray-700 text-base font-normal leading-relaxed text-center dark:text-white">
-      Tak mogą wyglądać twoje strony!
-
- </p>
-<div className="container">
-  <img className='photo'  src="./dzwiek1.jpg" alt="" />
-    <img className='photo'  src="./dzwiek2.jpg" alt="" />
-  <img className='photo'  src="./dzwiek3.jpg" alt="" />
-    <img className='photo'  src="./dzwiek4.jpg" alt="" />
-
-        <img className='photo'  src="./galopstrona1.jpg" alt="" />
-                <img className='photo'  src="./galopstrona3.jpg" alt="" />
-
-                     <img className='photo'  src="./szymanskistrona2.jpg" alt="" />
-                     <img className='photo'  src="./szymanskistrona3.jpg" alt="" />
-                     <img className='photo'  src="./szymanskistrona4.jpg" alt="" />
-
-                      <img className='photo'  src="./rosestrona1.jpg" alt="" />
-                       <img className='photo'  src="./rosestrona2.jpg" alt="" />
-                        <img className='photo'  src="./rosestrona3.jpg" alt="" />
-
-                        <img className='photo'  src="./zacznijstrona2.jpg" alt="" />
-                     <img className='photo'  src="./zacznijstrona3.jpg" alt="" />
-                     
-</div>
 
     </div>
   </div>

@@ -1,6 +1,6 @@
 import Review from "./Review";
 import './styles/products.scss'
-
+import CookieConsentBanner from './CookieConsentBanner'
 export default function Home() {
   return (
 
@@ -18,7 +18,7 @@ export default function Home() {
 Jeśli chcesz dowiedzieć się więcej o mojej ofercie, zapraszam do kontaktu. Z przyjemnością odpowiem na Twoje pytania i przedstawię szczegóły współpracy. 
   </p>
        </section>
-  
+                  <CookieConsentBanner />
     <Review></Review>
     </div>
 </div>

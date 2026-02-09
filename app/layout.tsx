@@ -4,6 +4,7 @@ import Footer from "./Footer/page";
 import "./globals.css";
 import {ThemeProvider} from "next-themes"
 import Navbar from "./Navbar/page";
+import CookieConsentBanner from './CookieConsentBanner'
 
 
 const geistSans = Geist({
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Navbar />
         {children}
           <Footer/>
+                <CookieConsentBanner />
         </ThemeProvider>
       </body>
     </html>
