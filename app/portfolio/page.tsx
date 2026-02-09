@@ -16,11 +16,15 @@ export default function Portfolio() {
       
       <div className="imgcontainer">
      <img src="./szymanski.png" alt="" />
+               <h4 className=''>U szymańskich </h4>
            <img src="./dzwiekoterapia.jpg" alt="" />
+                 <h4 className=''>Dźwiękoterapia </h4>
               <img src="./rose.jpg" alt="" />
-                 <img src="./szymanski.png" alt="" />
+                    <h4 className=''>W oczach rose </h4>
                     <img src="./zacznij.jpg" alt="" />
+                          <h4 className=''>Zacznij działać </h4>
                        <img src="./galopem.jpg" alt="" />
+                             <h4 className=''>Galopem do marzeń </h4>
 </div>
 
  <h1 className="text-5xl font-semibold text-center text-shadow-lg/20">Przykładowe strony:</h1>
