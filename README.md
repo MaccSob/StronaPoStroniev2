@@ -5,5 +5,5 @@ React,
 JS,
 NextJS (TypeScript, Tailwind),
 Sass
-Resend
+EmaiLJs
 
