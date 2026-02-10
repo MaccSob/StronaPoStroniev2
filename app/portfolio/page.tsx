@@ -13,18 +13,20 @@ export default function Portfolio() {
 
 
         <h1 className="text-5xl font-semibold text-center text-shadow-lg/20">Okładki:</h1>
-      
-      <div className="imgcontainer">
+      <p className="mt-2 text-lg/8 text-center text-gray-600">kliknij w tytuły aby zobaczyć przykładowe strony!</p>
+    <div className="row">
+        <div className="column">
      <img src="./szymanski.png" alt="" />
-               <h4 className=''>U szymańskich </h4>
+    <a  className='mt-2 text-lg/8 text-center m-8 p-6 ' href="/szymanski">U szymańskich</a>
            <img src="./dzwiekoterapia.jpg" alt="" />
-                 <h4 className=''>Dźwiękoterapia </h4>
+               <a  className='mt-2 text-lg/8 text-center m-8 p-6 ' href="/dzwiekoterapia">Dźwiękoterapia</a>
               <img src="./rose.jpg" alt="" />
-                    <h4 className=''>W oczach rose </h4>
+               <a  className='mt-2 text-lg/8 text-center m-8 p-6 ' href="/rose">W oczach rose</a>
                     <img src="./zacznij.jpg" alt="" />
-                          <h4 className=''>Zacznij działać </h4>
+                     <a  className='mt-2 text-lg/8 text-center m-8 p-6 ' href="/zacznij">Zacznij działać</a>
                        <img src="./galopem.jpg" alt="" />
-                             <h4 className=''>Galopem do marzeń </h4>
+                        <a  className='mt-2 text-lg/8 text-center m-2 p-6 ' href="/galopem">Galopem do marzeń</a>
+</div>
 </div>
 
 
