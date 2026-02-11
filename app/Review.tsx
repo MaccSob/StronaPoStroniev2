@@ -43,10 +43,10 @@ const Review = () => {
 
 
   return (
-    <article className="review dark:text-black">
+    <article className="review dark:text-white">
       <h4 className="author">{name}</h4>
-      <p className="job">{job}</p>
-        <ReadMore id="read-more-text" text={text} />
+      <p className="job ">{job}</p>
+        <ReadMore id="read-more-text "  text={text} />
 
       <div className="button-container">
         <button className="prev-btn" onClick={prevPerson}>

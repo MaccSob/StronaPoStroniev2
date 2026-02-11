@@ -46,7 +46,7 @@ export default function Contact() {
         />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-4xl font-semibold tracking-tight text-balance text-black sm:text-5xl text-shadow-lg/20 dark:text-white dark:-text-shadow-lg/20">Skontakuj się ze mną!</h2>
+        <h2 className="text-4xl font-semibold tracking-tight text-balance text-black sm:text-5xl text-shadow-lg/20 dark:text-white dark:-text-shadow-lg/20">Skontaktuj się ze mną!</h2>
        
       </div>
       <form  onSubmit={handleSubmit} action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">

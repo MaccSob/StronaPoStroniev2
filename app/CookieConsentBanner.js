@@ -12,7 +12,7 @@ const CookieConsentBanner = () => {
       enableDeclineButton
       cookieName="yourAppCookieConsent"
       style={{ background: "#2B373B", color: "#FFF" }}
-      buttonStyle={{ backgroundColor: "#4CAF50", color: "#FFF", fontSize: "14px" }}
+      buttonStyle={{ backgroundColor: "oklch(44.8% 0.119 151.328)", color: "#FFF", fontSize: "14px" }}
       declineButtonStyle={{ backgroundColor: "#f44336", color: "#FFF", fontSize: "14px" }}
       expires={365}  // Number of days before the cookie expires
       onAccept={() => {
@@ -23,7 +23,7 @@ const CookieConsentBanner = () => {
       }}
     >
       Ta strona wykorzystuje pliki cookies. Dalsze korzystanie ze strony oznacza zgodę na ich użycie. 
-      Więcej informacji na <a className="color red" href="/policy">Polityka prywatności</a>.
+      Więcej informacji na <a className="text-green-800" href="/policy">Polityka prywatności</a>.
     </CookieConsent>
   );
 };

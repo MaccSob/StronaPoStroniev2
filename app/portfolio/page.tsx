@@ -17,15 +17,15 @@ export default function Portfolio() {
     <div className="row">
         <div className="column">
      <img src="./szymanski.png" alt="" />
-    <a  className='mt-2 text-lg/8 text-center m-8 p-6 ' href="/szymanski">U szymańskich</a>
+    <a  className='mt-2 text-lg/8 text-center  ' href="/szymanski">U szymańskich</a>
            <img src="./dzwiekoterapia.jpg" alt="" />
-               <a  className='mt-2 text-lg/8 text-center m-8 p-6 ' href="/dzwiekoterapia">Dźwiękoterapia</a>
+               <a  className='mt-2 text-lg/8 text-center ' href="/dzwiekoterapia">Dźwiękoterapia</a>
               <img src="./rose.jpg" alt="" />
-               <a  className='mt-2 text-lg/8 text-center m-8 p-6 ' href="/rose">W oczach rose</a>
+               <a  className='mt-2 text-lg/8 text-center  ' href="/rose">W oczach rose</a>
                     <img src="./zacznij.jpg" alt="" />
-                     <a  className='mt-2 text-lg/8 text-center m-8 p-6 ' href="/zacznij">Zacznij działać</a>
+                     <a  className='mt-2 text-lg/8 text-center ' href="/zacznij">Zacznij działać</a>
                        <img src="./galopem.jpg" alt="" />
-                        <a  className='mt-2 text-lg/8 text-center m-2 p-6 ' href="/galopem">Galopem do marzeń</a>
+                        <a  className='mt-2 text-lg/8 text-center ' href="/galopem">Galopem do marzeń</a>
 </div>
 </div>
 
