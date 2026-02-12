@@ -1,36 +1,65 @@
+"use client"
 import '../styles/portfolio.scss'
+import { useState } from 'react';
+import React from "react";
+import { useEffect } from 'react';
+import Image, { ImageProps } from "next/image";
+import ModalComponent from '../ModalComponent';
+
 
 
 export default function Portfolio() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const [images, setImages] = useState<ImageProps[]>([]);
+
+  useEffect(() => {
+    // Initialize image data
+    setImages([
+      { src: img1Path, alt: "Image 1" },
+      // Add other images here...
+    ]);
+  }, []);
+
+const handleNext = () => {
+    const nextIndex =
+      selectedIndex === images.length - 1 ? 0 : selectedIndex + 1;
+    setSelectedImage(images[nextIndex].src as string);
+    setSelectedIndex(nextIndex);
+  };
+
+  const handlePrev = () => {
+    const prevIndex =
+      selectedIndex === 0 ? images.length - 1 : selectedIndex - 1;
+    setSelectedImage(images[prevIndex].src as string);
+    setSelectedIndex(prevIndex);
+  };
+
   return (
+    <div className="flex flex-wrap justify-center w-3/5 mx-auto">
+      {images.map((image, index) => (
+        <div key={index} className="w-1/3 p-2 " style={{ maxWidth: "320px" }}>
+          <Image
+            {...image}
+            width={320}
+            height={200}
+            priority
+            className=" border-4 border-solid border-purple-800 hover:border-purple-500"
+            onClick={() => handleOnClicked(image.src as string, index)}
+          />
+        </div>
+      ))}
 
-    <div className="min-h-screen flex items-center justify-center p-24">
-    <div className="space-y3 max-w-5xl">
-
-
-
-
-
-
-        <h1 className="text-5xl font-semibold text-center text-shadow-lg/20">Okładki:</h1>
-      <p className="mt-2 text-lg/8 text-center text-gray-600">kliknij w tytuły aby zobaczyć przykładowe strony!</p>
-    <div className="row">
-        <div className="column">
-     <img src="./szymanski.png" alt="" />
-    <a  className='mt-2 text-lg/8 text-center  ' href="/szymanski">U szymańskich</a>
-           <img src="./dzwiekoterapia.jpg" alt="" />
-               <a  className='mt-2 text-lg/8 text-center ' href="/dzwiekoterapia">Dźwiękoterapia</a>
-              <img src="./rose.jpg" alt="" />
-               <a  className='mt-2 text-lg/8 text-center  ' href="/rose">W oczach rose</a>
-                    <img src="./zacznij.jpg" alt="" />
-                     <a  className='mt-2 text-lg/8 text-center ' href="/zacznij">Zacznij działać</a>
-                       <img src="./galopem.jpg" alt="" />
-                        <a  className='mt-2 text-lg/8 text-center ' href="/galopem">Galopem do marzeń</a>
-</div>
-</div>
-
-
+      {selectedImage && (
+        <ModalComponent
+          images={images}
+          selectedImage={selectedImage}
+          onClose={handleCloseModal}
+          onNext={handleNext}
+          onPrev={handlePrev}
+          selectedIndex={selectedIndex}
+        />
+      )}
     </div>
-  </div>
   );
-}
+};
