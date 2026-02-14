@@ -1,41 +1,23 @@
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
-  padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
 .column {
-  flex: 5%;
-  max-width: 25%;
-  padding: 0 4px;
-    max-width: 300px;
-}
-.column img:hover {
-  transform: scale(1.5);
-        cursor: pointer;
-}
-.column img {
-  margin-top: px;
-  vertical-align: middle;
-  width: 100%;
-    transition: transform .5s ease;
+  display: flex;
+  max-width: 350px;
+  justify-content: center;
+  gap: 30px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
-    flex: 50%;
-    max-width: 50%;
+    display: block;
   }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
-    flex: 100%;
-    max-width: 100%;
+       display: block;
   }
+}
+img:hover {
+  background-image: url('/public/dzwiek4.jpg');
 }
