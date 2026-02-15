@@ -4,12 +4,12 @@ import '../styles/portfolio.scss'
 export default function Portfolio() {
   return (
 
-    <div className="min-h-screen flex items-center justify-around p-22">
+    <div className="min-h-screen flex items-center justify-around">
       
-    <div className="space-y3 max-w-4xl">
+    <div className="space-y4 max-w-4xl">
 
 
-        <h1 className="text-5xl font-semibold text-center text-shadow-lg/20">Okładki:</h1>
+        <h1 className="text-6xl font-semibold text-center text-shadow-lg/20">Okładki:</h1>
 
 
 
