@@ -2,7 +2,6 @@
 
 const isProd = process.env.NODE_ENV === "production";
 
-// PODMIEN na dokladna nazwe swojego repozytorium (case-sensitive!)
 const repoName = "StronaPoStroniev2";
 
 const nextConfig = {
