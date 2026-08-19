@@ -1,5 +1,6 @@
 import '../styles/about.scss'
 import Image from 'next/image';
+import izaImg from '@/public/iza.jpg'
 
 
 
@@ -31,7 +32,7 @@ export default function About() {
           <div className="flex justify-center lg:justify-end w-full">
             <div className="relative w-full max-w-md aspect-[3/4] overflow-hidden rounded-2xl shadow-xl">
               <Image 
-                src="/iza.jpg" 
+                src={izaImg}
                 alt="Izabela Sobolewska" 
                 fill 
                 className="object-cover" 
