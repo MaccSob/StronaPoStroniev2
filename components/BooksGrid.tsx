@@ -9,6 +9,7 @@ interface Book {
   title: string;
   author: string;
   coverSrc: string;
+  /** Zdjęcia stron/wnętrza książki pokazywane w karuzeli po najechaniu */
   pagesSrc: string[];
 }
 
@@ -71,6 +72,12 @@ const books: Book[] = [
 
 const CAROUSEL_INTERVAL_MS = 1600;
 
+// next/image z images.unoptimized:true (wymagane dla output:"export") NIE dodaje
+// automatycznie basePath do lokalnych obrazkow - trzeba doklejac recznie.
+// Ta sama wartosc NEXT_PUBLIC_BASE_PATH jest ustawiana w workflow GitHub Actions.
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const withBasePath = (src: string) => `${basePath}${src}`;
+
 function BookCard({ book }: { book: Book }) {
   const [isHovered, setIsHovered] = useState(false);
   const [activePage, setActivePage] = useState(0);
@@ -105,7 +112,7 @@ function BookCard({ book }: { book: Book }) {
     >
       {/* Okładka */}
       <Image
-        src={book.coverSrc}
+        src={withBasePath(book.coverSrc)}
         alt={`Okładka książki ${book.title}`}
         fill
         sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
@@ -118,7 +125,7 @@ function BookCard({ book }: { book: Book }) {
       {book.pagesSrc.map((src, index) => (
         <Image
           key={src}
-          src={src}
+          src={withBasePath(src)}
           alt={`Strona ${index + 1} książki ${book.title}`}
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
@@ -154,18 +161,18 @@ function BookCard({ book }: { book: Book }) {
 export default function BooksGrid() {
   return (
     <section className="w-full py-12 px-4">
-      <div className="max-w-9xl mx-auto text-center mb-10">
+      <div className="max-w-6xl mx-auto text-center mb-10">
+        <h2 className="text-4xl font-mono font-bold tracking-tight">
+          Okładki:
+        </h2>
         <p className="mt-2 text-sm text-gray-500 font-mono">
           Przykładowe książki, w których tworzeniu brałam udział.
-        </p>
-        <p className="mt-2 text-sm text-gray-500 font-mono">
-          Po najechaniu kursorem, wyświetla się wnętrze książek.
         </p>
       </div>
 
       <div
         className="
-          max-w-12xl mx-auto
+          max-w-6xl mx-auto
           grid gap-6
           grid-cols-2
           sm:grid-cols-3

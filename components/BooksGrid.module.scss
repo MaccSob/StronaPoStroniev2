@@ -1,4 +1,7 @@
-
+// Efekty specyficzne dla karty książki, pisane w czystym SCSS
+// (bez @apply — w Tailwind v4 dyrektywy Tailwinda nie działają bezpiecznie
+// wewnątrz plików kompilowanych przez Sass, więc tu używamy zwykłych
+// wartości CSS, korzystając z zagnieżdżania i wygody składni SCSS).
 
 $transition-fast: 0.2s;
 $transition-image: 0.4s ease;

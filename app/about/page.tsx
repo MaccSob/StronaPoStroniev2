@@ -2,7 +2,6 @@ import '../styles/about.scss'
 import Image from 'next/image';
 
 
-
 export default function About() {
   return (
     <section className="min-h-screen flex items-center justify-center py-12 lg:py-24">
