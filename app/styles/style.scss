@@ -42,7 +42,6 @@
 }
 
 .review {
-  background: inherit;
   padding: 1.5rem 2rem;
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
@@ -80,4 +79,18 @@
 .prev-btn:hover,
 .next-btn:hover {
   color: var(--clr-primary-5);
+}
+.fade-in-container {
+  animation: fadeSlide 0.4s ease-out forwards;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
