@@ -72,9 +72,6 @@ const books: Book[] = [
 
 const CAROUSEL_INTERVAL_MS = 1600;
 
-// next/image z images.unoptimized:true (wymagane dla output:"export") NIE dodaje
-// automatycznie basePath do lokalnych obrazkow - trzeba doklejac recznie.
-// Ta sama wartosc NEXT_PUBLIC_BASE_PATH jest ustawiana w workflow GitHub Actions.
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const withBasePath = (src: string) => `${basePath}${src}`;
 
@@ -162,9 +159,6 @@ export default function BooksGrid() {
   return (
     <section className="w-full py-12 px-4">
       <div className="max-w-6xl mx-auto text-center mb-10">
-        <h2 className="text-4xl font-mono font-bold tracking-tight">
-          Okładki:
-        </h2>
         <p className="mt-2 text-sm text-gray-500 font-mono">
           Przykładowe książki, w których tworzeniu brałam udział.
         </p>

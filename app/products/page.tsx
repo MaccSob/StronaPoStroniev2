@@ -1,4 +1,5 @@
 import { FaPenFancy, FaCheck } from "react-icons/fa6";
+import '../styles/products.scss';
 import { PiEyeglasses } from "react-icons/pi";
 import { MdOutlineComputer } from "react-icons/md";
 
