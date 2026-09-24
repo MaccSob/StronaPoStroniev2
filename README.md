@@ -2,7 +2,7 @@
 
 Business website / portfolio for **Strona po Stronie** — a Polish book editing, proofreading and typesetting service. The site showcases published books she has worked on, client reviews, an offer/pricing page, an about page, and a contact form.
 
-**Live site:** https://stronapostronie.pl
+**Live site:** <https://stronapostronie.pl>
 
 ## 🚀 Tech Stack
 
@@ -13,6 +13,17 @@ Business website / portfolio for **Strona po Stronie** — a Polish book editing
 - **[EmailJS](https://www.emailjs.com/)** — sending messages from the contact form (client-side, via SMTP configured in the EmailJS dashboard)
 - **[react-cookie-consent](https://www.npmjs.com/package/react-cookie-consent)** — cookie/GDPR consent banner
 - **[Lucide](https://lucide.dev/)** / **react-icons** — icons
+
+## Architecture
+
+```mermaid
+flowchart LR
+    A[Browser] -->|SSR pages| B[Next.js App Router<br/>server.js on Node]
+    A -->|Contact form submit| C[EmailJS<br/>client-side, no backend]
+    B --> D[Static assets<br/>public/]
+```
+
+The site runs as a standalone Node.js server rather than a static export, since the shared hosting environment requires a live Node process. The contact form talks directly to EmailJS from the browser — there's no custom backend involved in sending messages.
 
 ## 📄 Pages & Sections
 
@@ -27,27 +38,27 @@ Business website / portfolio for **Strona po Stronie** — a Polish book editing
 
 ## 📦 Installation
 
-```bash
+```
 npm install
 ```
 
 ## 🧑‍💻 Local Development
 
-```bash
+```
 npm run dev
 ```
 
-The app will be available at [http://localhost:3000](http://localhost:3000).
+The app will be available at <http://localhost:3000>.
 
 ## 🏗️ Production Build
 
-```bash
+```
 npm run build
 ```
 
 Unlike a typical static export, this app runs as a **standalone Node.js server** (see `server.js`), which is required for the shared hosting environment it's deployed to. After building, start it with:
 
-```bash
+```
 npm start
 ```
 
@@ -60,21 +71,23 @@ This app is deployed on a shared Node.js hosting environment (Plesk / CloudLinux
 - `output: "export"` is **not** used — the app needs a live Node process to run (`server.js` as the startup file).
 - After uploading changed files, you must SSH into the server, activate the Node.js virtual environment, and run `npm run build` manually — the hosting panel does not rebuild automatically on file upload.
 - Example build command on the server:
-  ```bash
-  source ~/nodevenv/stronapostronie.pl/24/bin/activate && cd ~/stronapostronie.pl && npm run build
-  ```
+
+```
+source ~/nodevenv/stronapostronie.pl/24/bin/activate && cd ~/stronapostronie.pl && npm run build
+```
+
 - After a successful build, restart the app from the hosting panel for changes to go live.
 - Environment variables (e.g. `NEXT_PUBLIC_EMAILJS_SERVICE_ID`, `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`, `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`) are set in the hosting panel's Node.js app settings, not committed to the repo.
 
 ## 🔍 Linting
 
-```bash
+```
 npm run lint
 ```
 
 or with auto-fix:
 
-```bash
+```
 npm run lint:fix
 ```
 
