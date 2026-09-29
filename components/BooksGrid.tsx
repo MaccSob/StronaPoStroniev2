@@ -11,6 +11,8 @@ interface Book {
   coverSrc: string;
   /** Zdjęcia stron/wnętrza książki pokazywane w karuzeli po najechaniu */
   pagesSrc: string[];
+  /** Opcjonalny krótki opis/tekst pod okładką */
+  description?: string;
 }
 
 const books: Book[] = [
@@ -24,6 +26,7 @@ const books: Book[] = [
       "/images/pages/u-szymanskich-2.jpg",
       "/images/pages/u-szymanskich-3.jpg",
     ],
+    description: "Skład do druku",
   },
   {
     id: "dzwiekoterapia",
@@ -36,6 +39,7 @@ const books: Book[] = [
       "/images/pages/dzwiekoterapia-3.jpg",
       "/images/pages/dzwiekoterapia-4.jpg",
     ],
+    description: "Przygotowanie e-booka (PDF, EPUB, MOBI)",
   },
   {
     id: "w-oczach-rose",
@@ -47,6 +51,7 @@ const books: Book[] = [
       "/images/pages/w-oczach-rose-2.jpg",
       "/images/pages/w-oczach-rose-3.jpg",
     ],
+    description: "Skład do druku, przygotowanie e-booka (PDF, EPUB, MOBI)",
   },
   {
     id: "zacznij-dzialac",
@@ -57,6 +62,7 @@ const books: Book[] = [
       "/images/pages/zacznij-dzialac-1.jpg",
       "/images/pages/zacznij-dzialac-2.jpg",
     ],
+    description: "Skład do druku",
   },
   {
     id: "galopem-do-marzen",
@@ -67,8 +73,33 @@ const books: Book[] = [
       "/images/pages/galopem-do-marzen-1.jpg",
       "/images/pages/galopem-do-marzen-2.jpg",
     ],
+    description: "Skład do druku",
   },
-];
+  {
+    id: "tbd-1",
+    title: "Projekt w przygotowaniu",
+    author: "Autor TBD",
+    coverSrc: "",
+    pagesSrc: [],
+    description: "TBD.",
+  },
+  {
+    id: "tbd-2",
+    title: "Projekt w przygotowaniu",
+    author: "Autor TBD",
+    coverSrc: "",
+    pagesSrc: [],
+    description: "TBD.",
+  },
+  {
+    id: "tbd-3",
+    title: "Projekt w przygotowaniu",
+    author: "Autor TBD",
+    coverSrc: "",
+    pagesSrc: [],
+    description: "TBD.",
+  },
+];;
 
 const CAROUSEL_INTERVAL_MS = 1600;
 
@@ -100,56 +131,74 @@ function BookCard({ book }: { book: Book }) {
   };
 
   return (
-    <div
-      className={styles.card}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onTouchStart={handleMouseEnter}
-      onTouchEnd={handleMouseLeave}
-    >
-      {/* Okładka */}
-      <Image
-        src={withBasePath(book.coverSrc)}
-        alt={`Okładka książki ${book.title}`}
-        fill
-        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-        className={`${styles.image} ${
-          !isHovered ? styles["image--visible"] : ""
-        }`}
-      />
+    <div className="flex flex-col gap-3">
+      {/* Kontener okładki i karuzeli */}
+      <div
+        className={styles.card}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={handleMouseEnter}
+        onTouchEnd={handleMouseLeave}
+      >
+        {/* Okładka lub placeholder TBD */}
+        {book.coverSrc ? (
+          <Image
+            src={withBasePath(book.coverSrc)}
+            alt={`Okładka książki ${book.title}`}
+            fill
+            sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+            className={`${styles.image} ${
+              !isHovered ? styles["image--visible"] : ""
+            }`}
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-gray-400 text-2xl tracking-wider select-none rounded-md">
+            TBD
+          </div>
+        )}
 
-      {/* Strony - karuzela */}
-      {book.pagesSrc.map((src, index) => (
-        <Image
-          key={src}
-          src={withBasePath(src)}
-          alt={`Strona ${index + 1} książki ${book.title}`}
-          fill
-          sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-          className={`${styles.image} ${
-            isHovered && index === activePage ? styles["image--visible"] : ""
-          }`}
-        />
-      ))}
+        {/* Strony - karuzela */}
+        {book.pagesSrc.map((src, index) => (
+          <Image
+            key={src}
+            src={withBasePath(src)}
+            alt={`Strona ${index + 1} książki ${book.title}`}
+            fill
+            sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+            className={`${styles.image} ${
+              isHovered && index === activePage ? styles["image--visible"] : ""
+            }`}
+          />
+        ))}
 
-      {/* Kropki karuzeli */}
-      {isHovered && hasMultiplePages && (
-        <div className={styles.dots}>
-          {book.pagesSrc.map((_, index) => (
-            <span
-              key={index}
-              className={`${styles.dot} ${
-                index === activePage ? styles["dot--active"] : ""
-              }`}
-            />
-          ))}
-        </div>
-      )}
+        {/* Kropki karuzeli */}
+        {isHovered && hasMultiplePages && (
+          <div className={styles.dots}>
+            {book.pagesSrc.map((_, index) => (
+              <span
+                key={index}
+                className={`${styles.dot} ${
+                  index === activePage ? styles["dot--active"] : ""
+                }`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
 
-      {/* Podpis */}
-      <div className={styles.caption}>
-        <p className={styles.caption__title}>{book.title}</p>
-        <p className={styles.caption__author}>{book.author}</p>
+      {/* Podpis i opis pod okładką */}
+      <div className="flex flex-col text-left px-1">
+        <p className="font-semibold text-gray-800 dark:text-gray-100">
+          {book.title}
+        </p>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          {book.author}
+        </p>
+        {book.description && (
+          <p className="mt-1 text-xs text-gray-500 leading-snug">
+            {book.description}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -169,9 +218,9 @@ export default function BooksGrid() {
           max-w-6xl mx-auto
           grid gap-6
           grid-cols-2
-          sm:grid-cols-3
-          md:grid-cols-4
-          lg:grid-cols-5
+          sm:grid-cols-2
+          md:grid-cols-3
+          lg:grid-cols-4
         "
       >
         {books.map((book) => (

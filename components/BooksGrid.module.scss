@@ -1,11 +1,14 @@
-// Efekty specyficzne dla karty książki, pisane w czystym SCSS
-// (bez @apply — w Tailwind v4 dyrektywy Tailwinda nie działają bezpiecznie
-// wewnątrz plików kompilowanych przez Sass, więc tu używamy zwykłych
-// wartości CSS, korzystając z zagnieżdżania i wygody składni SCSS).
-
 $transition-fast: 0.2s;
 $transition-image: 0.4s ease;
 
+// Nowy główny kontener, układający zdjęcie i tekst pod spodem w kolumnę
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+// Kontener samego zdjęcia 
 .card {
   position: relative;
   width: 100%;
@@ -18,6 +21,24 @@ $transition-image: 0.4s ease;
 
   &:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb; // Jasnoszary
+  color: #9ca3af; // Ciemniejszy szary
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  user-select: none;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #1f2937;
   }
 }
 
@@ -58,31 +79,29 @@ $transition-image: 0.4s ease;
 }
 
 .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 12px;
-  pointer-events: none;
-  z-index: 10;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  display: flex;
+  flex-direction: column;
+  padding: 0 4px;
+  text-align: left;
+  
+
 
   &__title {
-    color: #fff;
     font-size: 0.875rem;
     font-weight: 600;
     margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   &__author {
-    color: rgba(255, 255, 255, 0.8);
     font-size: 0.75rem;
     margin: 2px 0 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    opacity: 0.8; 
+  }
+
+  &__description {
+    font-size: 0.75rem;
+    margin: 6px 0 0;
+    opacity: 0.6; 
+    line-height: 1.4;
   }
 }

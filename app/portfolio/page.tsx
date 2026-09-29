@@ -8,7 +8,7 @@ export default function Portfolio() {
     <div className="space-y4 w-full">
 
 
-        <h1 className="text-6xl font-semibold text-center text-shadow-lg/20">Okładki:</h1>
+        <h1 className="text-6xl pt-10 font-semibold text-center text-shadow-lg/20">Okładki:</h1>
 
 <BooksGrid></BooksGrid>
 
